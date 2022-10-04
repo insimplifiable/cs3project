@@ -6,10 +6,13 @@ html, body {
 }
 
 .heading {
-  height: 64px;
+  height: 62px;
   width: 100%;
   background-color: #d9d9d9;
   display: block;
+  position: sticky;
+  top: 0;
+  z-index: 1;
 }
 
 .topnav {
@@ -17,20 +20,46 @@ html, body {
   float: right;
 }
 
-.topnav li {
-  display: inline-block;
-  margin: 6px 15px;
-}
-
 .topnav a {
+  display: block;
   text-decoration: none;
-  padding: 5px 0;
   color: black;
+  padding: 21px 15px;
+  transition: 0.3s;
 }
 
-::placeholder {
-  font-family: "Century Gothic", Kaiti;
-  font-size: 14px;
+.topnav input[type="text"] {
+  height: 25px;
+  width: 150px;
+  margin: 17px 30px;
+}
+
+.topnav a:hover {
+  background-color: #ccc;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 100px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
 }
 
 .center {
@@ -61,55 +90,66 @@ hr {
   background-color: #000000;
 }
 
-/* Dropdown Button */
-.dropbtn {
-  border: none;
-}
-
-.dropdown {
-  position: relative;
-  display: inline-block;
-}
-
-.dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: #f1f1f1;
-  min-width: 100px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 1;
-}
-
-.dropdown-content a {
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
-}
-
-.dropdown-content a:hover {
+.type-intro {
+  left: 15%;
+  display: flex;
+  height: 70vh;
+  width: 70%;
   background-color: #ddd;
+  position: relative;
 }
 
-.dropdown:hover .dropdown-content {
-  display: block;
+.image-scrolling {
+  height: 100%;
+  width: 100vh;
+  background-color: #d4d4d4;
+  text-align: center;
+  position: absolute;
 }
 
-.dropdown:hover .dropbtn {
-  background-color: #aaa;
+.type-desc {
+  height: 100%;
+  width: 42vh;
+  padding: 0 20px;
+  right: 0;
+  background-color: #ccc;
+  position: absolute;
 }
 
 .bottom-body {
-  height: 100px;
+  position: relative;
+  height: 80px;
   width: 100%;
   background-color: #d9d9d9;
   font-weight: bold;
 }
+
 .bottom-body p {
+  margin: 0;
   padding: 10px;
 }
 
 .bottom-body br {
   display: block;
-  margin: 7px 0 0;
   content: " ";
+}
+
+.bottom-right {
+  position: absolute;
+  top: 30px;
+  right: 10px;
+}
+
+.bottom-right a {
+  text-decoration: none;
+  font-size: 20px;
+  color: black;
+}
+
+.type-games {
+  height: 409px;
+  padding: 14px;
+  width: 25%;
+  background-color: #d9d9d9;
+  position: relative;
 }
