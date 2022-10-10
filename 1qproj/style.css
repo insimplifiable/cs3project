@@ -6,7 +6,7 @@ html, body {
 }
 
 .heading {
-  height: 62px;
+  height: 65px;
   width: 100%;
   background-color: #d9d9d9;
   display: block;
@@ -50,6 +50,8 @@ html, body {
   min-width: 100px;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: 1;
+  font-size: 12px;
+  width: 145px;
 }
 
 .dropdown-content a {
@@ -60,6 +62,10 @@ html, body {
 
 .dropdown:hover .dropdown-content {
   display: block;
+}
+
+.dropdown:hover .divider {
+  border-top: solid 1px #000;
 }
 
 .center {
@@ -116,40 +122,33 @@ hr {
   position: absolute;
 }
 
-.bottom-body {
-  position: relative;
-  height: 80px;
+.bottom {
+  height: 25px;
   width: 100%;
   background-color: #d9d9d9;
-  font-weight: bold;
+  bottom: 0;
+  position: fixed;
 }
 
-.bottom-body p {
-  margin: 0;
-  padding: 10px;
-}
-
-.bottom-body br {
-  display: block;
-  content: " ";
-}
-
-.bottom-right {
-  position: absolute;
-  top: 30px;
-  right: 10px;
-}
-
-.bottom-right a {
-  text-decoration: none;
-  font-size: 20px;
-  color: black;
-}
-
-.type-games {
-  height: 409px;
-  padding: 14px;
-  width: 25%;
+.main {
+  height: 512px;
+  width: 100%;
   background-color: #d9d9d9;
-  position: relative;
 }
+
+.content {
+  padding: 1px 12px;
+  margin: auto;
+  width: 80%;
+  height: 100%;
+  background-color: #eee;
+}
+
+.float img:first-child {
+   float: right;
+   right: 30px;
+   top: 40%;
+}
+
+/*--fsr the hover on the top navigation bar stays the same even if i change padding, as welll as the dropdown bar is up a bit from the heading border and idk why--*/
+/*--should be fixed next week--*/
