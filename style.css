@@ -1,4 +1,9 @@
 @font-face {
+  font-family: 'Century Gothic';
+  src: url(century-gothic.ttf);
+}
+
+@font-face {
   font-family: Kaiti;
   src: url(Kaiti.ttf);
 }
