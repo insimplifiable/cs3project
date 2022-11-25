@@ -16,11 +16,11 @@ html, body {
 }
 
 /*Header formatting*/
-.header {
+.heading {
   height: 100%;
 }
 
-.heading {
+header {
   height: 62px;
   width: 100%;
   background-color: #1e0120;
@@ -31,12 +31,12 @@ html, body {
 }
 
 /*Top Navigation*/
-.topnav {
+header nav {
   display: flex;
   float: right;
 }
 
-.topnav a {
+header nav a {
   display: block;
   text-decoration: none;
   color: #fffedb;
@@ -46,7 +46,7 @@ html, body {
   font-weight: bold;
 }
 
-.topnav input {
+header nav input {
   height: 20px;
   width: 150px;
   margin: 18px 30px 0;
@@ -57,7 +57,7 @@ html, body {
   padding: 3px 5px;
 }
 
-.topnav a:hover {
+header nav a:hover {
   background-color: #bb94ff;
 }
 
@@ -123,14 +123,14 @@ hr.wider {
 }
 
 /*Type navigation formatting*/
-.type-nav table {
+#type-nav table {
   margin: auto;
   border: none;
   border-collapse: collapse;
 
 }
 
-.type-nav table td {
+#type-nav table td {
   border: none;
   border-collapse: collapse;
 }
@@ -142,7 +142,7 @@ table img {
 /*End of type navigation formatting*/
 
 /*Footer formatting*/
-.bottom {
+footer {
   height: 25px;
   width: 100%;
   background-color: #d9d9d9;
@@ -150,20 +150,20 @@ table img {
   position: fixed;
 }
 
-.bottom p {
+footer p {
   margin: 5px 10px;
   font-size: 12px
 }
 /*End of footer formatting*/
 
 /*Info section formatting*/
-.main {
+main {
   width: 100%;
   background-color: #29032b;
   height: 85vh;
 }
 
-.content {
+article {
   padding: 1px 12px;
   margin: auto;
   width: 80%;
@@ -172,35 +172,155 @@ table img {
   overflow: auto;
 }
 
-.content h2 {
+article h1 {
+  font-size: 1.75em;
+  text-align: center;
+}
+
+article h2 {
   margin: 0;	
 }
-.content table, th, td {
+
+article h3.quote {
+  line-height: 0.5;
+  text-align: center;
+  text-indent: -150px;
+  margin: 0 0 0 50px;
+}
+
+article table, th, td {
   border: 1px solid black;
   border-collapse: collapse;
 }
 
-.content table {
+article table {
   table-layout: fixed;
   width: 100%;
 }
 
-.content td {
+article td {
   font-size: 0.9em;
   text-align: center;
 }
 
-.content hr {
+article td a, .list a {
+  font-weight: bold;
+  text-decoration: none;
+  color: #312273;
+}
+
+article td a:hover, .list a:hover {
+  color: #34348a;
+}
+
+article hr {
   height: 1px;
   width: 100%;
   background-color: black;
 }
 
-h2 + p {
+article p {
   font-size: 0.9em;
 }
-/*End of info section formatting*/
 
-.content li {
+.english-quote {
+  display: none;
+  line-height: 0.5;
+  text-align: center;
+  text-indent: -100px;
+  margin: 0 0 0 50px;
+}
+
+article h3.quote span {
+  font-size: 0.8em;
+}
+
+article h3.english-quote span {
+  font-size: 0.9em;
+}
+
+.quote:hover + .english-quote {
+  display: block;
+}
+
+.quote:hover {
+  display: none;
+}
+
+section.transition-line {
+  height: 50%;
+  position: relative;
+}
+
+article nav {
+  background: #ceb9ed;
+  border-radius: 20px;
+  width: 20%;
+  height: 100%;
+  float: left;
+  position: absolute;
+  left: 2%;
+  font-size: 0.9em;
+  border: 2px solid #494154;
+}
+
+.intro-info {
+  background: #ceb9ed;
+  border-radius: 20px;
+  width: 70%;
+  height: 100%;
+  position: absolute;
+  right: 2%;
+  border: 2px solid #494154;
+}
+
+article nav ol {
+  counter-reset: item;
+  padding: 0 10px;
+}
+
+article nav li {
+  display: block;
+}
+
+article nav li:before {
+  content: counters(item, ".") ". ";
+  counter-increment: item;
+}
+
+section.intro-info img {
+  float: left;
+  height: 100%;
+}
+
+section.intro-info img[title] {
+  margin: 12.5px;
+  height: 90%;
+}
+
+section.intro-info img.approach-type {
+  margin: 0 12px;
+}
+
+article li, .data p span {
   font-weight: bold;
 }
+
+section.intro-info .data {
+  margin: auto;
+}
+
+section.intro-info .data p {
+  margin: 5px;
+}
+
+section.intro-info .data br {
+  margin: 0;
+}
+
+section.transition-line {
+  height: 50%;
+  position: relative;
+}
+
+/*End of info section formatting*/
